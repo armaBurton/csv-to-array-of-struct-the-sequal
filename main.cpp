@@ -14,11 +14,28 @@ int main(void){
 
   int read = 0,
       records = 0;
-    
   do{
-    std::cout << "afe ae" << std::endl;
+    read = fscanf(file, 
+                  "%s, %lf, %lf, %lf",
+                  &dirtbikeSpecs[records].name,
+                  &dirtbikeSpecs[records].length,
+                  &dirtbikeSpecs[records].height,
+                  &dirtbikeSpecs[records].weight
+                 );
+    if (read == 4) records++;
+
+    if(read != 4 && !feof(file)){
+      printf("File formate incorrect\n");
+      return 1;
+    }
+
+    if(ferror(file)){
+      printf("Error reading file.\n");
+      return 1;
+    }
 
   }while(!feof(file));
 
+  fclose(file);
 
 }

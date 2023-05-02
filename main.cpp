@@ -17,7 +17,7 @@ int main(void){
       records = 0;
   do{
     read = fscanf(file, 
-                  "%49[^,], %lf, %lf, %lf, %lf",
+                  "%49[^,], %lf, %lf, %lf, %lf\n",
                   dirtbikeSpecs[records].name,
                   &dirtbikeSpecs[records].seatHeight,
                   &dirtbikeSpecs[records].length,
@@ -28,6 +28,7 @@ int main(void){
 
     if(read != 5 && !feof(file)){
       printf("File format incorrect\n");
+      std::cout << read << std::endl;
       return 1;
     }
 

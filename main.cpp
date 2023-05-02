@@ -17,7 +17,7 @@ int main(void){
   do{
     read = fscanf(file, 
                   "%s, %lf, %lf, %lf, %lf",
-                  &dirtbikeSpecs[records].name,
+                  dirtbikeSpecs[records].name,
                   &dirtbikeSpecs[records].seatHeight,
                   &dirtbikeSpecs[records].length,
                   &dirtbikeSpecs[records].height,
@@ -40,7 +40,7 @@ int main(void){
   fclose(file);
 
   for (int i = 0; i < records; i++){
-    printf("%s, %lf in, %lf in %lf in, %lf in",
+    printf("%s, %lf in, %lf in %lf in, %.2lf in\n",
             dirtbikeSpecs[i].name, 
             dirtbikeSpecs[i].seatHeight, 
             dirtbikeSpecs[i].length, 

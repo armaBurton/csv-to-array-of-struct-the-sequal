@@ -1,11 +1,2 @@
-#ifndef DIRTBIKE_H
-#define DIRTBIKE_H
+#include "dirtbikeSpecs.h"
 
-typedef struct{
-  char name[50];
-  double length;
-  double height;
-  double weight;
-} Dirtbike;
-
-#endif;

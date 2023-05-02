@@ -25,7 +25,7 @@ int main(void){
     if (read == 4) records++;
 
     if(read != 4 && !feof(file)){
-      printf("File formate incorrect\n");
+      printf("File format incorrect\n");
       return 1;
     }
 

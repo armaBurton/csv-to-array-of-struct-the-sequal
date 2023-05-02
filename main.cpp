@@ -5,7 +5,7 @@ int main(void){
   FILE *file;
 
   // file = fopen("./data/dirtbikeSpecs/dirtbikeData.txt", "r");
-  file = fopen("data\dirtbikeSpecs\dirtbikeData.txt", "r");
+  file = fopen("data/dirtbikeSpecs/dirtbikeData.txt", "r");
 
   if (file == NULL){
     printf("Error opening file.\n");
@@ -17,7 +17,7 @@ int main(void){
       records = 0;
   do{
     read = fscanf(file, 
-                  "%s, %lf, %lf, %lf, %lf",
+                  "%49[^,], %lf, %lf, %lf, %lf",
                   dirtbikeSpecs[records].name,
                   &dirtbikeSpecs[records].seatHeight,
                   &dirtbikeSpecs[records].length,

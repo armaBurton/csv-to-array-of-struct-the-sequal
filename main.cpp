@@ -16,15 +16,16 @@ int main(void){
       records = 0;
   do{
     read = fscanf(file, 
-                  "%s, %lf, %lf, %lf",
+                  "%s, %lf, %lf, %lf, %lf",
                   &dirtbikeSpecs[records].name,
+                  &dirtbikeSpecs[records].seatHeight,
                   &dirtbikeSpecs[records].length,
                   &dirtbikeSpecs[records].height,
                   &dirtbikeSpecs[records].weight
                  );
-    if (read == 4) records++;
+    if (read == 5) records++;
 
-    if(read != 4 && !feof(file)){
+    if(read != 5 && !feof(file)){
       printf("File format incorrect\n");
       return 1;
     }
@@ -39,8 +40,9 @@ int main(void){
   fclose(file);
 
   for (int i = 0; i < records; i++){
-    printf("%s, %lf in, %lf in, %lf in",
+    printf("%s, %lf in, %lf in %lf in, %lf in",
             dirtbikeSpecs[i].name, 
+            dirtbikeSpecs[i].seatHeight, 
             dirtbikeSpecs[i].length, 
             dirtbikeSpecs[i].height, 
             dirtbikeSpecs[i].weight 

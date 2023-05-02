@@ -4,7 +4,8 @@
 int main(void){
   FILE *file;
 
-  file = fopen("./data/dirtbikeSpecs/dirtbikeData.txt", "r");
+  // file = fopen("./data/dirtbikeSpecs/dirtbikeData.txt", "r");
+  file = fopen("data\dirtbikeSpecs\dirtbikeData.txt", "r");
 
   if (file == NULL){
     printf("Error opening file.\n");
@@ -40,7 +41,7 @@ int main(void){
   fclose(file);
 
   for (int i = 0; i < records; i++){
-    printf("%s, %lf in, %lf in %lf in, %.2lf in\n",
+    printf("%s, %.2f in, %.2f in %.2f in, %.2f in\n",
             dirtbikeSpecs[i].name, 
             dirtbikeSpecs[i].seatHeight, 
             dirtbikeSpecs[i].length, 

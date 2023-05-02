@@ -16,7 +16,7 @@ int main(void){
       records = 0;
     
   do{
-    
+    std::cout << "afe ae" << std::endl;
 
   }while(!feof(file));
 

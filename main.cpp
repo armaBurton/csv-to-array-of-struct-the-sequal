@@ -38,4 +38,15 @@ int main(void){
 
   fclose(file);
 
+  for (int i = 0; i < records; i++){
+    printf("%s, %lf in, %lf in, %lf in",
+            dirtbikeSpecs[i].name, 
+            dirtbikeSpecs[i].length, 
+            dirtbikeSpecs[i].height, 
+            dirtbikeSpecs[i].weight 
+    );
+  }
+  printf("\n");
+
+  return 0;
 }
